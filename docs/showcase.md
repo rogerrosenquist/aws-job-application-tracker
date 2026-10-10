@@ -14,11 +14,11 @@ Link the repository and https://d3vx7zv7kgrlly.cloudfront.net/. Label the hosted
 
 - Built and deployed an AWS serverless job application tracker using Python Lambda, API Gateway, DynamoDB, and Cognito; hosted its frontend with CloudFront and private S3 access and implemented table-scoped IAM permissions for CRUD operations.
 
-## Screenshots to add
+## Screenshots
 
-Capture the actual tracker with fictional sample applications as `docs/images/dashboard.png`, and the signed-out page as `docs/images/signed-out.png`. Then embed them in the README with relative image paths.
+The [dashboard screenshot](images/dashboard.png) was captured from the deployed tracker on October 10, 2026, and is embedded in the README. It shows the add form, four fictional applications, different statuses, and Save/Delete controls.
 
-The dashboard image should show the add form, several fictional entries, different statuses, and Save/Delete controls. Focus on the application. The Mermaid architecture diagram already renders in the GitHub README.
+A signed-out screenshot can also be added as `docs/images/signed-out.png`. Focus on the application. The Mermaid architecture diagram already renders in the GitHub README.
 
 ## Interview walkthrough
 

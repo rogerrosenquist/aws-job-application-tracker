@@ -8,6 +8,12 @@ Built as a practical project while studying for AWS Solutions Architect Associat
 
 **[Open the hosted app](https://d3vx7zv7kgrlly.cloudfront.net/)** — the welcome page is public; dashboard access requires an invited Cognito account. Public self-registration is disabled.
 
+## Dashboard preview
+
+![Signed-in job application tracker showing the add form and four fictional applications with status and delete controls](docs/images/dashboard.png)
+
+The deployed dashboard with fictional sample applications. Visitors can view this preview without a Cognito account.
+
 ## Features
 
 - Add a company, job title, application date, and status.
