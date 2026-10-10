@@ -1,5 +1,9 @@
 # Validation record
 
+## GitHub Actions
+
+The [first published workflow run](https://github.com/rogerrosenquist/aws-job-application-tracker/actions/runs/38092366213) completed successfully on October 10, 2026, for commit `8115561`. It ran the JavaScript syntax check, 16 offline Python tests, and 8 offline JavaScript tests on Ubuntu with Python 3.14 and Node.js 24.
+
 ## Deployed checks
 
 These checks were manually performed by Roger against the running AWS deployment:

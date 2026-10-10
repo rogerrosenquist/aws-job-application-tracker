@@ -1,5 +1,7 @@
 # Serverless Job Application Tracker
 
+[![Project checks](https://github.com/rogerrosenquist/aws-job-application-tracker/actions/workflows/checks.yml/badge.svg)](https://github.com/rogerrosenquist/aws-job-application-tracker/actions/workflows/checks.yml)
+
 A personal job application tracker deployed on AWS. A static JavaScript frontend signs in through Amazon Cognito and calls a protected HTTP API to create, list, update, and delete applications in DynamoDB.
 
 Built as a practical project while studying for AWS Solutions Architect Associate. The first version was provisioned through the AWS console and verified against the deployed services.
@@ -103,7 +105,7 @@ node --test tests/ui.test.cjs
 
 Offline tests use SDK/DynamoDB and DOM/fetch doubles. They cover handler behavior, pagination, invalid input, missing records, PKCE/state checks, deletion confirmation, error recovery, and API 401 handling. They do not create AWS resources or prove the deployed IAM configuration.
 
-The included GitHub Actions workflow runs the checks on pushes and pull requests. Its first GitHub run will happen after publication; it does not deploy to AWS.
+The included GitHub Actions workflow runs the checks on pushes and pull requests; it does not deploy to AWS. The [first published run](https://github.com/rogerrosenquist/aws-job-application-tracker/actions/runs/38092366213) passed the JavaScript syntax check, 16 Python tests, and 8 JavaScript tests.
 
 Hosted sign-in, CRUD persistence, and sign-out were also verified manually against DynamoDB. See the [validation record](docs/validation.md).
 
