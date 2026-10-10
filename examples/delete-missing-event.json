@@ -1,0 +1,5 @@
+{
+  "pathParameters": {
+    "applicationId": "delete-test-does-not-exist"
+  }
+}

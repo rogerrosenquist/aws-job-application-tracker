@@ -1,0 +1,6 @@
+{
+  "pathParameters": {
+    "applicationId": "example-application-id"
+  },
+  "body": "{\"status\":\"Interviewing\"}"
+}

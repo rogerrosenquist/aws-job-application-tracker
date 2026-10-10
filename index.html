@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div><p class="eyebrow">YOUR NEXT OPPORTUNITY</p><h1>Job Application Tracker</h1><p class="subtitle">Keep your search moving, one application at a time.</p></div>
+      <div class="account"><span id="session-status">Signed out</span><button id="sign-in">Sign in</button><button id="sign-out" class="secondary" hidden>Sign out</button></div>
+    </header>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section id="welcome" class="card">
+      <h2>Your job search, in one place.</h2>
+      <p>Sign in to view your applications, add a new opportunity, update your progress, or remove an entry.</p>
+    </section>
+    <div id="tracker" hidden>
+      <section class="card">
+        <h2>Add an application</h2>
+        <form id="application-form">
+          <fieldset id="application-fields">
+            <div class="form-grid">
+              <label>Company<input name="company" required autocomplete="organization" placeholder="Company name"></label>
+              <label>Job title<input name="jobTitle" required placeholder="Cloud Support Associate"></label>
+              <label>Date applied<input id="date-applied" name="dateApplied" type="date" required></label>
+              <label>Status<select name="status"><option>Applied</option><option>Interviewing</option><option>Rejected</option><option>Offer</option></select></label>
+            </div>
+            <button type="submit">Add application</button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="card">
+        <div class="section-heading"><h2>Applications <span id="application-count" class="count">0</span></h2><button id="refresh" class="secondary">Refresh list</button></div>
+        <p id="empty" hidden>No applications yet. Add your first one above.</p>
+        <div class="table-scroll"><table><thead><tr><th scope="col">Company</th><th scope="col">Job title</th><th scope="col">Date applied</th><th scope="col">Status</th><th scope="col">Actions</th></tr></thead><tbody id="applications"></tbody></table></div>
+      </section>
+    </div>
+    <footer>AWS portfolio project · Cognito · API Gateway · Lambda · DynamoDB</footer>
+  </main>
+</body>
+</html>
