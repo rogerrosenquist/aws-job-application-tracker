@@ -16,7 +16,9 @@ Link the repository and https://d3vx7zv7kgrlly.cloudfront.net/. Label the hosted
 
 ## Screenshots
 
-The [dashboard screenshot](images/dashboard.png) was captured from the deployed tracker on October 10, 2026, and is embedded in the README. It shows the add form, four fictional applications, different statuses, and Save/Delete controls.
+The [current dashboard preview](images/dashboard-preview.jpg), embedded in the README, shows the refreshed frontend rendered locally with five fictional applications. It includes colored status totals, search, filtering, sorting, and Save/Delete controls. The preview fixture is outside the repository and is never deployed.
+
+The [original dashboard screenshot](images/dashboard.png) was captured from the deployed tracker on October 10, 2026. It records the initial interface and four fictional applications.
 
 A signed-out screenshot can also be added as `docs/images/signed-out.png`. Focus on the application. The Mermaid architecture diagram already renders in the GitHub README.
 

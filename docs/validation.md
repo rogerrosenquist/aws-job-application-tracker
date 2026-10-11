@@ -27,3 +27,11 @@ Run the commands in the README. Python tests use SDK/DynamoDB doubles; JavaScrip
 The checks cover scan pagination, create validation, conditional update/delete behavior, missing records, PKCE challenges, callback state mismatch, deletion cancellation, failed-request recovery, and API 401 handling.
 
 Offline checks do not verify deployed IAM or Cognito/API/CloudFront configuration. Manual deployed checks provide evidence for the observed integration behavior. Load testing, user-isolation testing, and a comprehensive security review have not been performed.
+
+## Frontend refresh — October 10, 2026
+
+The refreshed frontend passed the JavaScript syntax check, 16 Python tests, and 16 JavaScript tests locally. The new browser behavior checks cover combined search/status filters, sorting without mutating source data, global status totals, saving/deleting under a filter, retaining unsaved choices after a failed save, and ignoring a late refresh after sign-out.
+
+Browser checks used a separate offline fixture with fictional applications, outside the repository. At 1440px the dashboard showed a table; at 390px and 320px it showed application cards without horizontal overflow. Search, clicking a status total, changing/saving a status, and adding an application were exercised through the UI. Adding reset the form's status and color to Applied. No console errors were observed in this preview.
+
+The three production frontend files were uploaded to the existing private S3 bucket, and CloudFront invalidation was requested for `/`, `/index.html`, `/app.js`, and `/styles.css`. No backend handlers, authorization settings, or DynamoDB records were changed by this deployment. The fictional preview fixture was not uploaded. Hosted authenticated CRUD should be checked with Roger's account; the offline checks do not replace that integration check.

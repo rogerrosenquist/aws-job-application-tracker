@@ -10,18 +10,21 @@ Built as a practical project while studying for AWS Solutions Architect Associat
 
 ## Dashboard preview
 
-![Signed-in job application tracker showing the add form and four fictional applications with status and delete controls](docs/images/dashboard.png)
+![Refreshed tracker with colored status totals, an add form, search, filters, and five fictional applications](docs/images/dashboard-preview.jpg)
 
-The deployed dashboard with fictional sample applications. Visitors can view this preview without a Cognito account.
+The current frontend rendered locally with fictional sample data for a dashboard preview. Visitors can view it without a Cognito account. The [original deployed screenshot](docs/images/dashboard.png) records the first version.
 
 ## Features
 
 - Add a company, job title, application date, and status.
-- View applications sorted by date.
+- Search by company or job title and filter by status.
+- Sort applications by newest, oldest, or company name.
+- See clickable status totals with blue Applied, purple Interviewing, green Offer, and rose Rejected accents.
 - Change status to Applied, Interviewing, Rejected, or Offer.
 - Delete an application after confirmation.
 - Sign in and sign out with Cognito-managed login.
 - Use the hosted app with the local development server stopped.
+- Use a table on desktop and application cards on smaller screens.
 
 ## Architecture
 
@@ -109,7 +112,7 @@ node --check app.js
 node --test tests/ui.test.cjs
 ```
 
-Offline tests use SDK/DynamoDB and DOM/fetch doubles. They cover handler behavior, pagination, invalid input, missing records, PKCE/state checks, deletion confirmation, error recovery, and API 401 handling. They do not create AWS resources or prove the deployed IAM configuration.
+Offline tests use SDK/DynamoDB and DOM/fetch doubles. They cover handler behavior, pagination, invalid input, missing records, PKCE/state checks, filtering, sorting, status totals, status saves, deletion confirmation, error recovery, and API 401 handling. They also verify that a late response cannot redraw signed-out records. They do not create AWS resources or prove the deployed IAM configuration.
 
 The included GitHub Actions workflow runs the checks on pushes and pull requests; it does not deploy to AWS. The [first published run](https://github.com/rogerrosenquist/aws-job-application-tracker/actions/runs/38092366213) passed the JavaScript syntax check, 16 Python tests, and 8 JavaScript tests.
 
